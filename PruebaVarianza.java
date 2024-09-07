@@ -3,30 +3,27 @@ import java.util.ArrayList;
 
 public class PruebaVarianza {
 
-    public String PruebaDeVarianza(int n, ArrayList<Integer> lista) {
-        String salida = "";
-        int numSuma = 0, numero;
-        double varianza, promedio, limiteInf = 0, limiteSup = 0, numSumaVar = 0;
-        double nivelConfianza = 1.959963985;
+  public PruebaVarianza(int n, ArrayList<Integer> lista) {
+    String salida = "";
+    int numSuma = 0, numero;
+    double varianza, promedio, limiteInf = 0, limiteSup = 0, numSumaVar = 0;
+    double nivelConfianza = 1.959963985;
 
-        for (int x = 0; x < n; x++) {
-            numSuma += lista.get(x);
-        }
-        promedio = numSuma / n;
-
-        for (int y = 0; y < n; y++) {
-            numero = lista.get(y);
-            numSumaVar += (Math.pow((numero - promedio), 2));
-        }
-        varianza = numSumaVar / n;
-
-        // pendiente
-
-        if (varianza > limiteInf && varianza < limiteSup) {
-            salida = "Se aceptan los números aleatorios";
-        } else {
-            salida = "No se aceptan los números aleatorios";
-        }
-        return salida;
+    for (int x = 0; x < n; x++) {
+      numSuma += lista.get(x);
     }
+    promedio = numSuma / n;
+
+    for (int y = 0; y < n; y++) {
+      numero = lista.get(y);
+      numSumaVar += (Math.pow((numero - promedio), 2));
+    }
+    varianza = numSumaVar / n;
+
+    // pendiente
+
+    boolean seAceptan = varianza > limiteInf && varianza < limiteSup;
+    System.out.print("Pueba de Varianza: ");
+    System.out.println((seAceptan ? "Se aceptan" : "No se aceptan") + "los numeros aleatorios");
+  }
 }
