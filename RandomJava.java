@@ -5,11 +5,11 @@ import java.util.List;
  * RandomJava
  */
 public class RandomJava {
-  public List<Double> generados = new ArrayList<>();
+  public List<Double> listaNumeros = new ArrayList<>();
 
   RandomJava(int n) {
     for (int i = 0; i < n; i++) {
-      generados.add(Math.random());
+      listaNumeros.add(Math.random());
     }
 
   }
@@ -17,7 +17,7 @@ public class RandomJava {
   @Override
   public String toString() {
     String numeros = "";
-    for (Double numero : generados) {
+    for (Double numero : listaNumeros) {
       numeros += numero + "\n";
     }
     return numeros;
