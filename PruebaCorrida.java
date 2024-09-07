@@ -3,7 +3,8 @@ import java.util.ArrayList;
 // Esta es una Prueba de Independencia
 
 public class PruebaCorrida {
-  public PruebaCorrida(int n, ArrayList<Integer> lista) {
+  public PruebaCorrida(ArrayList<Integer> lista) {
+    int n = lista.size();
     // Si el número anterior es menor o igual se pone 0 sino 1
     int[] numAntInfSup = new int[n - 1];
     // Si en el anterior la secuencia es igual entonces se pone 1 sino 0

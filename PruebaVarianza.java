@@ -3,7 +3,8 @@ import java.util.ArrayList;
 
 public class PruebaVarianza {
 
-  public PruebaVarianza(int n, ArrayList<Integer> lista) {
+  public PruebaVarianza(ArrayList<Integer> lista) {
+    int n = lista.size();
     int numSuma = 0, numero;
     double varianza, promedio, limiteInf = 0, limiteSup = 0, numSumaVar = 0;
     double nivelConfianza = 1.959963985;
