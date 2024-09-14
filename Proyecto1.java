@@ -31,9 +31,11 @@ public class Proyecto1 {
           System.exit(0);
           break;
       }
+      System.out.println();
       new PruebaMedias(listaNumeros);
       new PruebaVarianza(listaNumeros);
       new PruebaCorrida(listaNumeros);
+      System.out.println();
     }
   }
 
