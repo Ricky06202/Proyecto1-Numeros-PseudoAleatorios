@@ -1,3 +1,5 @@
+import java.io.File;
+import java.io.FileWriter;
 import java.util.ArrayList;
 import java.util.Scanner;
 
@@ -32,6 +34,13 @@ public class Proyecto1 {
       new PruebaVarianza(listaNumeros);
       new PruebaCorrida(listaNumeros);
       System.out.println();
+
+      if (deseaExportarLosNumeros())
+        exportarNumeros(listaNumeros);
+      else
+        mostrarNumeros(listaNumeros);
+
+      System.out.println();
     }
   }
 
@@ -51,4 +60,37 @@ public class Proyecto1 {
       System.out.println("Opción no valida");
     }
   }
+
+  static boolean deseaExportarLosNumeros() {
+    while (true) {
+      System.out.print("Desea exportar los datos en txt? (s/n): ");
+      char respuesta = scanner.next().charAt(0);
+      if (respuesta == 's' || respuesta == 'n') {
+        return respuesta == 's';
+      }
+      System.out.println("Opción no valida");
+    }
+  }
+
+  static void exportarNumeros(ArrayList<Double> lista) {
+    try {
+      String ruta = "Numeros.txt";
+      File archivo = new File(ruta);
+      FileWriter escritor = new FileWriter(archivo);
+      for (Double numero : lista) {
+        escritor.write(numero + "\n");
+      }
+      escritor.close();
+      System.out.println("Numeros exportados correctamente");
+    } catch (Exception e) {
+      System.out.println("Error al exportar los datos");
+    }
+  }
+
+  static void mostrarNumeros(ArrayList<Double> lista) {
+    for (Double numero : lista) {
+      System.out.println(numero);
+    }
+  }
+
 }
