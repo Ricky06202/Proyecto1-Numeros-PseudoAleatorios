@@ -6,13 +6,13 @@ import java.util.Scanner;
  */
 public class Proyecto1 {
 
-  static Scanner scanner = new Scanner(System.in);
-
   public static void main(String[] args) {
     while (true) {
+      Scanner scanner = new Scanner(System.in);
       int opcion = menu();
       System.out.print("Cantidad de Elementos aleatorios: ");
       int n = scanner.nextInt();
+      scanner.close();
       ArrayList<Double> listaNumeros = null;
       switch (opcion) {
         case 1:
@@ -36,6 +36,7 @@ public class Proyecto1 {
 
   static int menu() {
     while (true) {
+      Scanner scanner = new Scanner(System.in);
       System.out.println("1. Random Cuadrados Medios");
       System.out.println("2. Random Lehmer");
       System.out.println("3. Random Java");
@@ -43,6 +44,7 @@ public class Proyecto1 {
       System.out.println("5. Salir");
       System.out.print("Seleccione una opcion: ");
       int opcion = scanner.nextInt();
+      scanner.close();
       if (opcion == 5)
         System.exit(0);
       if (opcion >= 1 && opcion <= 4)
