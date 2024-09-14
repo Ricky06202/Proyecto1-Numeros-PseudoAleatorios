@@ -35,6 +35,9 @@ public class Proyecto1 {
       new PruebaCorrida(listaNumeros);
       System.out.println();
 
+      if (opcion == 4)
+        continue;
+
       if (deseaExportarLosNumeros())
         exportarNumeros(listaNumeros);
       else

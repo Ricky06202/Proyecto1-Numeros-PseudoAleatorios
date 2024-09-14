@@ -10,7 +10,7 @@ public class RandomLehmer {
     numAnterior = semilla;
     for (int y = 0; y < n; y++) {
       aux = (48271 * numAnterior) % ((int) Math.pow(2, 31) - 1);
-      listaNumeros.add(aux / Math.pow(2, 31) - 1);
+      listaNumeros.add(Math.abs(aux / Math.pow(2, 31) - 1));
       numAnterior = aux;
     }
   }
