@@ -10,6 +10,10 @@ public class Proyecto1 {
   public static void main(String[] args) {
     while (true) {
       int opcion = menu();
+      if (opcion == 5) {
+        scanner.close();
+        System.exit(0);
+      }
       System.out.print("Cantidad de Elementos aleatorios: ");
       int n = scanner.nextInt();
       ArrayList<Double> listaNumeros = null;
@@ -25,10 +29,6 @@ public class Proyecto1 {
           break;
         case 4:
           listaNumeros = new RandomExcel(n).listaNumeros;
-          break;
-        case 5:
-          scanner.close();
-          System.exit(0);
           break;
       }
       System.out.println();
