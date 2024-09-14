@@ -10,10 +10,8 @@ public class Proyecto1 {
   public static void main(String[] args) {
     while (true) {
       int opcion = menu();
-      if (opcion == 5) {
-        scanner.close();
+      if (opcion == 5)
         System.exit(0);
-      }
       System.out.print("Cantidad de Elementos aleatorios: ");
       int n = scanner.nextInt();
       ArrayList<Double> listaNumeros = null;
