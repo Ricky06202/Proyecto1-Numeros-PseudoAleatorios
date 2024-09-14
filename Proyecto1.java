@@ -46,7 +46,7 @@ public class Proyecto1 {
       int opcion = scanner.nextInt();
       if (opcion == 5)
         System.exit(0);
-      if (opcion >= 1 && opcion <= 5)
+      if (opcion >= 1 && opcion <= 4)
         return opcion;
       System.out.println("Opción no valida");
     }
