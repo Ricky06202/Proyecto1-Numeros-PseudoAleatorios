@@ -1,12 +1,11 @@
 import java.util.ArrayList;
-import java.util.List;
 import java.util.Scanner;
 
 /**
  * RandomExcel
  */
 public class RandomExcel {
-  public List<Double> listaNumeros = new ArrayList<>();
+  public ArrayList<Double> listaNumeros = new ArrayList<>();
 
   RandomExcel(int n) {
     Scanner scanner = new Scanner(System.in);

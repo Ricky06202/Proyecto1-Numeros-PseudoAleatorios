@@ -1,4 +1,4 @@
-import java.util.List;
+import java.util.ArrayList;
 import java.util.Scanner;
 
 /**
@@ -13,7 +13,7 @@ public class Proyecto1 {
       int opcion = menu();
       System.out.print("Cantidad de Elementos aleatorios: ");
       int n = scanner.nextInt();
-      List<Double> listaNumeros;
+      ArrayList<Double> listaNumeros = null;
       switch (opcion) {
         case 1:
           listaNumeros = new RandomCuadradosMedios(n).listaNumeros;
@@ -32,7 +32,6 @@ public class Proyecto1 {
       new PruebaVarianza(listaNumeros);
       new PruebaCorrida(listaNumeros);
     }
-    scanner.close();
   }
 
   static int menu() {

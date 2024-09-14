@@ -1,9 +1,8 @@
 import java.util.ArrayList;
-import java.util.List;
 import java.util.Scanner;
 
 public class RandomLehmer {
-  public List<Double> listaNumeros = new ArrayList<>();
+  public ArrayList<Double> listaNumeros = new ArrayList<>();
 
   public RandomLehmer(int n) {
     Scanner scanner = new Scanner(System.in);
