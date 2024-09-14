@@ -1,13 +1,14 @@
 import java.util.ArrayList;
+
 import org.apache.commons.math3.distribution.ChiSquaredDistribution;
 // esta es una Prueba de Uniformidad
 
 public class PruebaVarianza {
 
-    public String PruebaDeVarianza(int n, ArrayList<Integer> lista) {
-        String salida = "";
-        int numSuma = 0, numero, gradosLibertad = n - 1;
-        double numSumaVar = 0, alpha = 0.05;
+    public PruebaVarianza(ArrayList<Double> lista) {
+        int n = lista.size();
+        int numSuma = 0, gradosLibertad = n - 1;
+        double numSumaVar = 0, alpha = 0.05, numero;
 
         for (int x = 0; x < n; x++) {
             numSuma += lista.get(x);
@@ -32,10 +33,9 @@ public class PruebaVarianza {
         double limiteSup = (gradosLibertad * varianza) / chiCuadradoInferior;
 
         if (varianza > limiteInf && varianza < limiteSup) {
-            salida = "Se aceptan los números aleatorios";
+            System.out.println("Se aceptan los números aleatorios");
         } else {
-            salida = "No se aceptan los números aleatorios";
+            System.out.println("No se aceptan los números aleatorios");
         }
-        return salida;
     }
 }

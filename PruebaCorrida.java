@@ -3,8 +3,8 @@ import java.util.ArrayList;
 // Esta es una Prueba de Independencia
 
 public class PruebaCorrida {
-    public String PruebaDeCorrida(int n, ArrayList<Integer> lista) {
-        String salida = "";
+    public PruebaCorrida(ArrayList<Double> lista) {
+        int n = lista.size();
         // Si el número anterior es menor o igual se pone 0 sino 1
         int[] numAntInfSup = new int[n - 1];
         // Si en el anterior la secuencia es igual entonces se pone 1 sino 0
@@ -45,11 +45,10 @@ public class PruebaCorrida {
         double desvEstandar = (sumaCorrida - mediaProblacional) / Math.sqrt(mediaDispersion);
 
         if (desvEstandar < nivelConfianza) {
-            salida = "Se aceptan los números aleatorios";
+            System.out.println("Se aceptan los números aleatorios");
         } else {
-            salida = "No se aceptan los números aleatorios ";
+            System.out.println("No se aceptan los números aleatorios");
         }
-        return salida;
     }
 
 }
