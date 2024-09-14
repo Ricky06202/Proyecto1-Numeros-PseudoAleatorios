@@ -38,17 +38,16 @@ public class PruebaCorrida {
             }
         }
 
-        double mediaProblacional, varianza, desvEstandar;
         double nivelConfianza = 1.959963985;
+        double mediaProblacional = (2 * n - 1) / 3;
+        double mediaDispersion = (((double) 16 * (double) n) - 29) / 90;
 
-        mediaProblacional = (2 * n - 1) / 3;
-        varianza = (16 / n - 1) / 90;
-        desvEstandar = (sumaCorrida - mediaProblacional) / Math.sqrt(varianza);
+        double desvEstandar = (sumaCorrida - mediaProblacional) / Math.sqrt(mediaDispersion);
 
         if (desvEstandar < nivelConfianza) {
             salida = "Se aceptan los números aleatorios";
         } else {
-            salida = "No se aceptan los números aleatorios";
+            salida = "No se aceptan los números aleatorios ";
         }
         return salida;
     }

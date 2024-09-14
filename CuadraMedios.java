@@ -22,15 +22,15 @@ public class CuadraMedios {
         return arrayNumeros;
     }
 
-    public static void main(String[] args) {
-        int numInicial = 4808; // Semilla
-        int n = 10; // Cantidad de números
-        int[] arrayCuadradosMedios = new int[n];
+    // public static void main(String[] args) {
+    // int numInicial = 4808; // Semilla
+    // int n = 10; // Cantidad de números
+    // int[] arrayCuadradosMedios = new int[n];
 
-        arrayCuadradosMedios = cuadradosMedios(numInicial, n);
+    // arrayCuadradosMedios = cuadradosMedios(numInicial, n);
 
-        for (int x = 0; x < n; x++) {
-            listaNumCuadrMedios.add(arrayCuadradosMedios[x]);
-        }
-    }
+    // for (int x = 0; x < n; x++) {
+    // listaNumCuadrMedios.add(arrayCuadradosMedios[x]);
+    // }
+    // }
 }
