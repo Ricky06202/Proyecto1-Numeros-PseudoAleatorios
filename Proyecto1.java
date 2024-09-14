@@ -10,8 +10,6 @@ public class Proyecto1 {
   public static void main(String[] args) {
     while (true) {
       int opcion = menu();
-      if (opcion == 5)
-        System.exit(0);
       System.out.print("Cantidad de Elementos aleatorios: ");
       int n = scanner.nextInt();
       ArrayList<Double> listaNumeros = null;
@@ -46,6 +44,8 @@ public class Proyecto1 {
       System.out.println("5. Salir");
       System.out.print("Seleccione una opcion: ");
       int opcion = scanner.nextInt();
+      if (opcion == 5)
+        System.exit(0);
       if (opcion >= 1 && opcion <= 5)
         return opcion;
       System.out.println("Opción no valida");
