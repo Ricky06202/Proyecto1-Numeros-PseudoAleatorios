@@ -7,7 +7,6 @@ public class PruebaVarianza {
         String salida = "";
         int numSuma = 0, numero;
         double varianza, promedio, limiteInf = 0, limiteSup = 0, numSumaVar = 0;
-        double nivelConfianza = 1.959963985;
 
         for (int x = 0; x < n; x++) {
             numSuma += lista.get(x);
