@@ -1,13 +1,10 @@
 import java.util.ArrayList;
-import java.util.Scanner;
-
 public class RandomCuadradosMedios {
   public ArrayList<Double> listaNumeros = new ArrayList<>();
 
   public RandomCuadradosMedios(int n) {
-    Scanner scanner = new Scanner(System.in);
     System.out.print("Ingrese la semilla: ");
-    int semilla = scanner.nextInt();
+    int semilla = Proyecto1.scanner.nextInt();
     int numPotencia, numDiv;
     int aux = semilla;
     listaNumeros.add(aux / 10000.0);
@@ -17,7 +14,6 @@ public class RandomCuadradosMedios {
       aux = numDiv % 10000;
       listaNumeros.add(aux / 10000.0);
     }
-    scanner.close();
   }
 
   @Override

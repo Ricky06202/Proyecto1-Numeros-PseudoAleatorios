@@ -5,14 +5,13 @@ import java.util.Scanner;
  * Proyecto1
  */
 public class Proyecto1 {
+  static Scanner scanner = new Scanner(System.in);
 
   public static void main(String[] args) {
     while (true) {
-      Scanner scanner = new Scanner(System.in);
       int opcion = menu();
       System.out.print("Cantidad de Elementos aleatorios: ");
       int n = scanner.nextInt();
-      scanner.close();
       ArrayList<Double> listaNumeros = null;
       switch (opcion) {
         case 1:
@@ -27,6 +26,10 @@ public class Proyecto1 {
         case 4:
           listaNumeros = new RandomExcel(n).listaNumeros;
           break;
+        case 5:
+          scanner.close();
+          System.exit(0);
+          break;
       }
       new PruebaMedias(listaNumeros);
       new PruebaVarianza(listaNumeros);
@@ -36,7 +39,6 @@ public class Proyecto1 {
 
   static int menu() {
     while (true) {
-      Scanner scanner = new Scanner(System.in);
       System.out.println("1. Random Cuadrados Medios");
       System.out.println("2. Random Lehmer");
       System.out.println("3. Random Java");
@@ -44,10 +46,7 @@ public class Proyecto1 {
       System.out.println("5. Salir");
       System.out.print("Seleccione una opcion: ");
       int opcion = scanner.nextInt();
-      scanner.close();
-      if (opcion == 5)
-        System.exit(0);
-      if (opcion >= 1 && opcion <= 4)
+      if (opcion >= 1 && opcion <= 5)
         return opcion;
       System.out.println("Opción no valida");
     }

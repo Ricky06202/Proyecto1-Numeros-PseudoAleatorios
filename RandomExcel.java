@@ -1,5 +1,4 @@
 import java.util.ArrayList;
-import java.util.Scanner;
 
 /**
  * RandomExcel
@@ -8,13 +7,11 @@ public class RandomExcel {
   public ArrayList<Double> listaNumeros = new ArrayList<>();
 
   RandomExcel(int n) {
-    Scanner scanner = new Scanner(System.in);
     System.out.println("Pegue la lista de numeros: ");
     for (int i = 0; i < n; i++) {
-      double numero = scanner.nextDouble();
+      double numero = Proyecto1.scanner.nextDouble();
       listaNumeros.add(numero);
     }
-    scanner.close();
   }
 
   @Override

@@ -1,13 +1,11 @@
 import java.util.ArrayList;
-import java.util.Scanner;
 
 public class RandomLehmer {
   public ArrayList<Double> listaNumeros = new ArrayList<>();
 
   public RandomLehmer(int n) {
-    Scanner scanner = new Scanner(System.in);
     System.out.print("Ingrese la semilla: ");
-    int semilla = scanner.nextInt();
+    int semilla = Proyecto1.scanner.nextInt();
     int aux, numAnterior;
     numAnterior = semilla;
     for (int y = 0; y < n; y++) {
@@ -15,7 +13,6 @@ public class RandomLehmer {
       listaNumeros.add(aux / Math.pow(2, 31) - 1);
       numAnterior = aux;
     }
-    scanner.close();
   }
 
   @Override
