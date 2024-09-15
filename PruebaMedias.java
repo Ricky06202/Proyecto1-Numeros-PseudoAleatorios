@@ -16,6 +16,6 @@ public class PruebaMedias {
         limiteSup = (0.5 + nivelConfianza) * (1 / Math.sqrt(12 * n));
         boolean seAceptan = promedio > limiteInf && promedio < limiteSup;
         System.out.print("Pueba de Medias: ");
-        System.out.println((seAceptan ? "Se aceptan" : "No se aceptan") + "los numeros aleatorios");
+        System.out.println((seAceptan ? "Se aceptan" : "No se aceptan ") + "los numeros aleatorios");
     }
 }

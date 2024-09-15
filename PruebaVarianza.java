@@ -34,6 +34,6 @@ public class PruebaVarianza {
 
         boolean seAceptan = varianza > limiteInf && varianza < limiteSup;
         System.out.print("Pueba de Varianza: ");
-        System.out.println((seAceptan ? "Se aceptan" : "No se aceptan") + "los numeros aleatorios");
+        System.out.println((seAceptan ? "Se aceptan" : "No se aceptan ") + "los numeros aleatorios");
     }
 }

@@ -47,7 +47,7 @@ public class PruebaCorrida {
 
         boolean seAceptan = desvEstandar < nivelConfianza;
         System.out.print("Pueba de Corrida: ");
-        System.out.println((seAceptan ? "Se aceptan" : "No se aceptan") + "los numeros aleatorios");
+        System.out.println((seAceptan ? "Se aceptan" : "No se aceptan ") + "los numeros aleatorios");
     }
 
 }
